@@ -37,8 +37,13 @@ gem 'react_on_rails', '11.0.0'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem "factory_girl_rails", "~> 4.0"
+  gem 'database_cleaner'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'selenium-webdriver', "2.53.4"
 end
 
 group :development do
