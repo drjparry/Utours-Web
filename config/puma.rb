@@ -20,8 +20,8 @@ environment ENV['RACK_ENV'] || 'development'
 #   ActiveRecord::Base.establish_connection
 # end
 #
-# threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
-# threads threads_count, threads_count
+threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
+threads threads_count, threads_count
 
 # Specifies the `port` that Puma will listen on to receive requests; default is 3000.
 #
@@ -37,7 +37,7 @@ port        ENV.fetch("PORT") { 3000 }
 # Workers do not work on JRuby or Windows (both of which do not support
 # processes).
 #
-# workers ENV.fetch("WEB_CONCURRENCY") { 2 }
+workers ENV.fetch("WEB_CONCURRENCY") { 2 }
 
 # Use the `preload_app!` method when specifying a `workers` number.
 # This directive tells Puma to first boot the application and load code
@@ -52,9 +52,9 @@ port        ENV.fetch("PORT") { 3000 }
 # recommended that you close any connections to the database before workers
 # are forked to prevent connection leakage.
 #
-# before_fork do
-#   ActiveRecord::Base.connection_pool.disconnect! if defined?(ActiveRecord)
-# end
+before_fork do
+  ActiveRecord::Base.connection_pool.disconnect! if defined?(ActiveRecord)
+end
 
 # The code in the `on_worker_boot` will be called if you are using
 # clustered mode by specifying a number of `workers`. After each worker
@@ -63,9 +63,9 @@ port        ENV.fetch("PORT") { 3000 }
 # or connections that may have been created at application boot, as Ruby
 # cannot share connections between processes.
 #
-# on_worker_boot do
-#   ActiveRecord::Base.establish_connection if defined?(ActiveRecord)
-# end
+on_worker_boot do
+  ActiveRecord::Base.establish_connection if defined?(ActiveRecord)
+end
 #
 
 # Allow puma to be restarted by `rails restart` command.
