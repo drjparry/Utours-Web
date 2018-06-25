@@ -1,0 +1,71 @@
+#background-image {
+  height: 100%;
+  object-fit: cover;
+  background: url('background.jpg') 0 0 no-repeat fixed;
+  background-repeat:no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.row {
+  font-family: 'Lato', sans-serif;
+  overflow: hidden;
+  background: rgba(242,92,0,0.6);
+  height: 100%;
+  min-height: 800px;
+  text-align: center;
+}
+
+.modal-background {
+  background-color: white;
+  margin: auto;
+  width: 500px;
+  margin-top: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.field {
+  width: 400px;
+  margin: auto;
+}
+
+.field input {
+  background-color: #FFFFFF;
+  border: 1px solid #8492A6;
+  border-radius: 5px;
+  height: 24px;
+  padding: 8px 0px;
+  width: 320px;
+  margin: 8px 0px;
+  font-size: 16px;
+}
+
+.auth-header {
+  color: #47525E;
+  font-family: Lato;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 51px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.sign-button input {
+  background-color: #47525E;
+  color: #ffffff;
+  padding: 8px;
+  font-weight: 400;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  height: 44px;
+  font-size: 16px;
+  width: 320px;
+}
